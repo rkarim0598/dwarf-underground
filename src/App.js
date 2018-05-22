@@ -1,37 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+// import TheBody from '../TheBody';
 
-class App extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      menu: ['Home', 'About', 'Log in'],
-    }
-  }
-  
+class TheBody extends Component {
   render() {
     return (
-      <div classNameName="App">
-        {/* <div classNameName="App-header">
-          <img src={logo} classNameName="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p classNameName="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
-        <body>
+      <body>
           <div className="expanded row header">
             <div className="clearfix">
               <div className="float-left logo">
                 <img src="http://www.iconninja.com/files/409/4/1006/axe-icon.svg" alt="axe" />
               </div>
               <div className="float-right nav-links">
-                {this.state.menu.map(item => <a href="#">{item}</a>)}
-                {/* <a href="#">Home</a> */}
-                {/* <a href="#">About</a> */}
-                {/* <a href="#">Log in</a> */}
+                {/* {this.state.menu.map(item => <a href="#">{item}</a>)} */}
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Log in</a>
               </div>
             </div>
             <div className="headline text-center small-12 columns">
@@ -123,9 +108,31 @@ class App extends Component {
             <h6>&copy; 2017 Erebor Industries</h6>
             <h6 className="float-right">All rights reserved</h6>
           </footer> 
-  
-      
         </body>
+    )
+  }
+}
+
+class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      menu: ['Home', 'About', 'Log in'],
+    }
+  }
+  
+  render() {
+    return (
+      <div classNameName="App">
+        {/* <div classNameName="App-header">
+          <img src={logo} classNameName="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+        <p classNameName="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p> */}
+        <TheBody name="body" component={TheBody} />
       </div>
     );
   }
