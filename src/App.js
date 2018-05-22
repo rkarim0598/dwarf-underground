@@ -116,17 +116,24 @@ class TheMain extends Component {
     )
   }
 }
+
+class TheFooter extends Component {
+  render() {
+    return (
+      <footer className="expanded row">
+        <h6>&copy; 2017 Erebor Industries</h6>
+        <h6 className="float-right">All rights reserved</h6>
+      </footer>
+    )
+  }
+}
 class TheBody extends Component {
   render() {
     return (
       <body>
           <Menu name="menu" component={Menu}/>
           <TheMain name="main" component={TheMain}/>
-  
-          <footer className="expanded row">
-            <h6>&copy; 2017 Erebor Industries</h6>
-            <h6 className="float-right">All rights reserved</h6>
-          </footer> 
+          <TheFooter name="footer" component={TheFooter}/>
         </body>
     )
   }
