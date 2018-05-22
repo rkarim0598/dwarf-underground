@@ -4,6 +4,13 @@ import './App.css';
 // import TheBody from '../TheBody';
 
 class TheBody extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      menu: ['Home', 'About', 'Log in'],
+    }
+  }
   render() {
     return (
       <body>
@@ -13,10 +20,10 @@ class TheBody extends Component {
                 <img src="http://www.iconninja.com/files/409/4/1006/axe-icon.svg" alt="axe" />
               </div>
               <div className="float-right nav-links">
-                {/* {this.state.menu.map(item => <a href="#">{item}</a>)} */}
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Log in</a>
+                {this.state.menu.map(item => <a href="#">{item}</a>)}
+                {/* <a href="#">Home</a> */}
+                {/* <a href="#">About</a> */}
+                {/* <a href="#">Log in</a> */}
               </div>
             </div>
             <div className="headline text-center small-12 columns">
