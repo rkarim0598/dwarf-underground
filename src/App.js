@@ -32,13 +32,10 @@ class Menu extends Component {
   }
 }
 
-class TheBody extends Component {
+class TheMain extends Component {
   render() {
     return (
-      <body>
-          <Menu name="menu" component={Menu}/>
-  
-          <main className="expanded row">
+      <main className="expanded row">
             <div className="large-8 medium-12 columns article">
               <h2 className="article-title">Gold Madness - Fact or Fiction?</h2>
               <div className="avatar">
@@ -116,6 +113,15 @@ class TheBody extends Component {
               </div>
             </div>
           </main>
+    )
+  }
+}
+class TheBody extends Component {
+  render() {
+    return (
+      <body>
+          <Menu name="menu" component={Menu}/>
+          <TheMain name="main" component={TheMain}/>
   
           <footer className="expanded row">
             <h6>&copy; 2017 Erebor Industries</h6>
@@ -138,13 +144,6 @@ class App extends Component {
   render() {
     return (
       <div classNameName="App">
-        {/* <div classNameName="App-header">
-          <img src={logo} classNameName="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p classNameName="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
         <TheBody name="body" component={TheBody} />
       </div>
     );
