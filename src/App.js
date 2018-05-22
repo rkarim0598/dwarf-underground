@@ -144,6 +144,7 @@ class Content extends Component {
     )
   }
 }
+
 class TheMain extends Component {
   render() {
     return (
